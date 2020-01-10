@@ -20,7 +20,7 @@ RUN yum install -y \
     devtoolset-3-gcc-c++
 
 RUN yum install -y zlib-devel
-RUN pip install umpire
+RUN pip install umpire==0.0.5 && pip install --upgrade pip
 RUN ln -sf /usr/bin/cmake3 /usr/bin/cmake
 
 EXPOSE 8080 22
