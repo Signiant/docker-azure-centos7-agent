@@ -22,5 +22,6 @@ RUN yum install -y \
 RUN yum install -y zlib-devel
 RUN pip install umpire==0.5.5 && pip install --upgrade pip
 RUN ln -sf /usr/bin/cmake3 /usr/bin/cmake
+RUN ln -sf /usr/bin/ctest3 /usr/bin/ctest
 
 EXPOSE 8080 22
