@@ -9,18 +9,30 @@ RUN yum install -y \
     curl \
     sudo \
     make \
-    python \
     tar \
     openssh-server \
     openssh-clients \
     git \
     cmake3 \
-    python-pip \
     devtoolset-3-gcc \
-    devtoolset-3-gcc-c++
+    devtoolset-3-gcc-c++ \
+	ncurses-devel \
+	jq \
+	zip \
+	unzip \
+	wget \
+	perl \
+	perl-Module-Load-Conditional \
+	perl-core \
+	pcre-devel \
+	rsync \
+	patch
 
-RUN yum install -y zlib-devel
-RUN pip install umpire==0.5.5 && pip install --upgrade pip
+# RUN yum install -y zlib-devel
+RUN pip3 install umpire \
+	&& pip3 install awscli \
+	&& pip3 install --upgrade pip
+
 RUN ln -sf /usr/bin/cmake3 /usr/bin/cmake
 RUN ln -sf /usr/bin/ctest3 /usr/bin/ctest
 
