@@ -28,6 +28,7 @@ RUN yum install -y \
 	rsync \
 	patch
 
+
 # RUN yum install -y zlib-devel
 RUN pip3 install umpire \
 	&& pip3 install awscli \
