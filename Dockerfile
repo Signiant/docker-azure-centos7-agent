@@ -26,10 +26,12 @@ RUN yum install -y \
 	perl-core \
 	pcre-devel \
 	rsync \
-	patch
+	patch \
+	ant \
+	zlib-devel
 
+RUN printf "export JAVA_HOME=/usr/share/java\n" >> ~/.bashrc
 
-# RUN yum install -y zlib-devel
 RUN pip3 install umpire \
 	&& pip3 install awscli \
 	&& pip3 install --upgrade pip
