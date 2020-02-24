@@ -9,11 +9,12 @@ RUN yum install -y \
     curl \
     sudo \
     make \
+	python3 \
+	python3-pip \
     tar \
     openssh-server \
     openssh-clients \
     git \
-    cmake3 \
     devtoolset-3-gcc \
     devtoolset-3-gcc-c++ \
 	ncurses-devel \
@@ -31,6 +32,12 @@ RUN yum install -y \
 	zlib-devel
 
 RUN printf "export JAVA_HOME=/usr/share/java\n" >> ~/.bashrc
+
+RUN curl -L https://github.com/Kitware/CMake/releases/download/v3.16.1/cmake-3.16.1-Linux-x86_64.tar.gz | tar xz && \
+    ln -sf $(pwd)/cmake-3.16.1-Linux-x86_64/bin/cmake /usr/local/bin && \
+    ln -sf $(pwd)/cmake-3.16.1-Linux-x86_64/bin/ctest /usr/local/bin && \
+    cmake --version && \
+    ctest --version
 
 RUN pip3 install umpire \
 	&& pip3 install awscli \

@@ -2,13 +2,14 @@
 
 CentOS 7 image with devtoolset-3 (GCC 4.9) installed from SCL. It also has a
 number of utilities including
-	- python3
-	- cmake v3.x
-	- umpire
-	- awscli
-	- ant
-	- zip/unzip
-	- perl
+
+* python3
+* cmake v3.16
+* umpire
+* awscli
+* ant
+* zip/unzip
+* perl
 
 JAVA_HOME has also been set
 
