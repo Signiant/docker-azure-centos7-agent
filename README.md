@@ -1,8 +1,16 @@
 # docker-azure-centos7-agent
 
-CentOS 7 image with devtoolset-3 (GCC 4.9) installed from SCL.  It also creates
-a user vsts\_azpcontainer (default Azure Devops user) with a home directory for
-building in.
+CentOS 7 image with devtoolset-3 (GCC 4.9) installed from SCL. It also has a
+number of utilities including
+	- python3
+	- cmake v3.x
+	- umpire
+	- awscli
+	- ant
+	- zip/unzip
+	- perl
+
+JAVA_HOME has also been set
 
 Remember when using packages installed from SCL (RHEL/CentOS software
 collections) that you must source the collection in any scripts that use them.
