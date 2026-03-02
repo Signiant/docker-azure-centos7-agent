@@ -46,4 +46,8 @@ RUN pip3 install umpire \
 RUN ln -sf /usr/bin/cmake3 /usr/bin/cmake
 RUN ln -sf /usr/bin/ctest3 /usr/bin/ctest
 
+RUN yum -y remove git
+RUN yum -y install https://packages.endpointdev.com/rhel/7/os/x86_64/endpoint-repo.x86_64.rpm
+RUN yum install git -y
+
 EXPOSE 8080 22
