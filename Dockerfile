@@ -23,8 +23,8 @@ RUN yum install -y \
     openssh-server \
     openssh-clients \
     git \
-    devtoolset-3-gcc \
-    devtoolset-3-gcc-c++ \
+    devtoolset-7-gcc \
+    devtoolset-7-gcc-c++ \
 	ncurses-devel \
 	jq \
 	zip \
@@ -47,7 +47,7 @@ RUN curl -L https://github.com/Kitware/CMake/releases/download/v3.16.1/cmake-3.1
     cmake --version && \
     ctest --version
 
-RUN pip3 install umpire \
+RUN pip3 install umpire==0.6.5 \
 	&& pip3 install awscli \
 	&& pip3 install --upgrade pip
 
