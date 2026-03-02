@@ -1,6 +1,6 @@
 # docker-azure-centos7-agent
 
-CentOS 7 image with devtoolset-3 (GCC 4.9) installed from SCL. It also has a
+CentOS 7 image with devtoolset-7 (gcc 7.3.1) installed from SCL. It also has a
 number of utilities including
 
 * python3
@@ -11,6 +11,8 @@ number of utilities including
 * zip/unzip
 * perl
 
+It also updates git from 1.8.3 to 2.43 needed for working with GoLang 1.25.7+
+
 JAVA_HOME has also been set
 
 Remember when using packages installed from SCL (RHEL/CentOS software
@@ -18,6 +20,6 @@ collections) that you must source the collection in any scripts that use them.
 
 So to use GCC, within the build script, insert the following:
 
-    source scl_source enable devtoolset-3
+    source scl_source enable devtoolset-7
 
-to make GCC 4.9 available.
+to make GCC 7.3.1 available.
